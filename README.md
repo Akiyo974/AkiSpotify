@@ -24,3 +24,7 @@ AkiSpotify est un projet de plateforme de streaming musical en ligne inspiré de
 
 ### Fichiers Audio
 - **Répertoire Audio :** Le répertoire `audio` contient des fichiers `.mp3` pour différentes catégories (par exemple, `christmas`, `brothers`, `duet`). Les musiques peuvent être ajoutées par l'administrateur via le panneau d'administration.
+
+---
+
+Ce projet a été réalisé par Christen Dijoux.
