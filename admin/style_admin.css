@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+:root {
+    --primary-color: #4a69bd;
+    --primary-hover-color: #1e3799;
+    --background-color: #f1f2f6;
+    --text-color: #2c3e50;
+    --error-color: #e55039;
+    --font-family: 'Segoe UI', 'Arial', sans-serif;
+    --border-color: #bdc3c7;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.admin-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+.admin-section {
+    margin-bottom: 40px;
+}
+
+.admin-section h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.logout-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    width: 350px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.user-form input[type="text"],
+.user-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.user-form input[type="text"]:focus,
+.user-form input[type="email"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.error {
+    color: var(--error-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-form {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.user-form .user {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.user-form label {
+    margin-bottom: 5px;
+}
+
+.user-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.artists-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.artists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.artist-form, .artist {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.artist {
+    width: 25%;
+}
+
+.artist-form h4, .artist-form input, .artist-form textarea,
+.artist input, .artist textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.artist-form textarea, .artist textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.artist-form input[type="submit"], .artist input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.artist-form input[type="submit"]:hover, .artist input[type="submit"]:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px; 
+    background-color: var(--primary-color); 
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    font-size: 16px;
+    font-weight: bold; 
+    cursor: pointer;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+button:hover {
+    background-color: var(--primary-hover-color); 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Boutons désactivés */
+button:disabled {
+    background-color: var(--border-color); 
+    cursor: not-allowed; 
+    color: #aaa; 
+}
+
+button-secondary {
+    background-color: white; 
+    color: var(--primary-color); 
+    border: 2px solid var(--primary-color); 
+}
+
+button-secondary:hover {
+    background-color: var(--primary-color); 
+}
+
+.albums-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.album-form, .album {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.album-form h4, .album-form input, .album-form select,
+.album input, .album select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.album-form select, .album select {
+    cursor: pointer;
+}
+
+.albums-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.album {
+    width: 30%; 
+    box-shadow: var(--box-shadow);
+}
+
+
+.album input[type="text"], .album input[type="date"], .album select {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.album input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.album input[type="submit"]:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.albums-prev, .albums-next {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.albums-prev:hover, .albums-next:hover {
+    background-color: var(--primary-hover-color);
+}
+.album-image {
+    width: 100%; 
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 4px; 
+    margin-bottom: 10px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+}

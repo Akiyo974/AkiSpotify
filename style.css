@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+:root {
+    --couleur-fond-principal: #181818;
+    --couleur-fond-secondaire: #282828;
+    --couleur-accent: #1db954;
+    --couleur-accent-clair: #1ed760;
+    --couleur-texte: #fff;
+    --couleur-erreur: #ff0033;
+
+    --police-principale: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    --espacement-petit: 10px;
+    --espacement-moyen: 20px;
+    --espacement-grand: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--couleur-accent);
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--couleur-fond-secondaire); 
+}
+
+
+body {
+    font-family: var(--police-principale);
+    background-color: var(--couleur-fond-principal);
+    color: var(--couleur-texte);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--couleur-accent);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: var(--couleur-accent-clair);
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--couleur-fond-secondaire);
+    padding: var(--espacement-moyen) 0;
+}
+
+header h1 {
+    font-size: 2em;
+    color: var(--couleur-texte);
+    margin: 0;
+    padding: var(--espacement-moyen);
+    text-align: center;
+    background-color: var(--couleur-fond-secondaire);
+}
+
+form {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: var(--espacement-moyen);
+    background-color: var(--couleur-fond-secondaire);
+    border-radius: 4px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: var(--espacement-petit);
+    margin-bottom: var(--espacement-moyen);
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: var(--espacement-petit);
+    border: none;
+    border-radius: 4px;
+    background-color: var(--couleur-accent);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--couleur-accent-clair);
+}
+
+footer {
+    background-color: var(--couleur-fond-secondaire);
+    color: var(--couleur-texte);
+    text-align: center;
+    padding: var(--espacement-moyen) 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+
+.error {
+    color: var(--couleur-erreur);
+    text-align: center;
+    margin: 0;
+}
+
+form + p {
+    text-align: center;
+    margin-top: var(--espacement-moyen);
+}
+
+#container-principale {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#sidebar, #sidebar-right {
+    width: 20%;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#sidebar-right {
+    width: 20%;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#main-content {
+    width: 60%;
+    margin: 1% 2% 5%;
+}
+
+#chansons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chanson {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    background-color: #282828;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.chanson img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.chanson:nth-child(4n) {
+    margin-right: 0;
+}
+
+#music-preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181818;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+audio#audio-player {
+    width: 60%;
+}
+
+.btn-ne-plus-aimer {
+    background-color: red; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    margin-top: 5px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+.btn-ne-plus-aimer:hover {
+    background-color: darkred; 
+}
+
+
+#playlists-container .chanson-aimee {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#playlists-container .chanson-aimee .chanson-image {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+#playlists-container .chanson-aimee .chanson-image img {
+    width: 50px; 
+    height: 50px;
+    object-fit: cover;
+}
+
+#playlists-container .chanson-aimee .chanson-titre-album {
+    display: flex;
+    flex-direction: column;
+}
+
+#playlists-container .chanson-aimee .chanson-titre-album .titre {
+    font-size: 1em;
+    margin: 0;
+}
+
+#playlists-container .chanson-aimee .chanson-titre-album .album {
+    font-size: 0.8em; 
+    margin: 0;
+}
+
+#sidebar #navigation a {
+    display: block; 
+    color: var(--couleur-texte); 
+    padding: var(--espacement-petit) var(--espacement-moyen);
+    margin: var(--espacement-petit) 0; 
+    transition: background-color 0.3s, color 0.3s; 
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+#sidebar #navigation a:hover, #sidebar #navigation a:focus {
+    background-color: var(--couleur-accent-clair);
+    color: #000; 
+}
